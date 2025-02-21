@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "75ef123a-a0c5-4bd4-98ab-a9f3461bf127",
+		"name": "FDADataService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42506394"
+	},
+	"item": [
+		{
+			"name": "Application Details by Manufacturer name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/FDA/application-details?name=LINDE%20NORTH%20AMERICA%20INC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"FDA",
+						"application-details"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "LINDE%20NORTH%20AMERICA%20INC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/FDA/application-details/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"application_number\": \"ANDA077794\",\r\n        \"sponsor_name\": \"SUN PHARM INDS\",\r\n        \"products\": [\r\n            {\r\n                \"product_number\": \"002\",\r\n                \"reference_drug\": \"No\",\r\n                \"brand_name\": \"OXCARBAZEPINE\",\r\n                \"active_ingredients\": [\r\n                    {\r\n                        \"name\": \"OXCARBAZEPINE\",\r\n                        \"strength\": \"300MG\"\r\n                    }\r\n                ],\r\n                \"reference_standard\": \"No\",\r\n                \"dosage_form\": \"TABLET\",\r\n                \"route\": \"ORAL\",\r\n                \"marketing_status\": \"Prescription\",\r\n                \"te_code\": \"AB\"\r\n            },\r\n            {\r\n                \"product_number\": \"003\",\r\n                \"reference_drug\": \"No\",\r\n                \"brand_name\": \"OXCARBAZEPINE\",\r\n                \"active_ingredients\": [\r\n                    {\r\n                        \"name\": \"OXCARBAZEPINE\",\r\n                        \"strength\": \"600MG\"\r\n                    }\r\n                ],\r\n                \"reference_standard\": \"No\",\r\n                \"dosage_form\": \"TABLET\",\r\n                \"route\": \"ORAL\",\r\n                \"marketing_status\": \"Prescription\",\r\n                \"te_code\": \"AB\"\r\n            },\r\n            {\r\n                \"product_number\": \"001\",\r\n                \"reference_drug\": \"No\",\r\n                \"brand_name\": \"OXCARBAZEPINE\",\r\n                \"active_ingredients\": [\r\n                    {\r\n                        \"name\": \"OXCARBAZEPINE\",\r\n                        \"strength\": \"150MG\"\r\n                    }\r\n                ],\r\n                \"reference_standard\": \"No\",\r\n                \"dosage_form\": \"TABLET\",\r\n                \"route\": \"ORAL\",\r\n                \"marketing_status\": \"Prescription\",\r\n                \"te_code\": \"AB\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/FDA/application-details/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"FDA",
+						"application-details",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
